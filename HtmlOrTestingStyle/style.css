@@ -1,0 +1,57 @@
+body{
+    background-color:rgb(27, 27, 27);
+}
+a:hover{
+    color: aliceblue;
+}
+a{
+    font-size: 30px;
+    color:rgb(116, 76, 2);
+}
+
+#head{
+ display: inline;   
+}
+
+h1{
+    color:orange;
+    font-size: 200%;
+  padding: 10px;
+  margin: 5px;
+
+}
+ul{
+    background-color:black;
+    font-size: 50px;
+}
+li{
+    display: inline;
+    padding: 0px 10px 0px 5px;
+}
+*{
+    color: azure;
+}
+.img{
+    color: rgb(27, 27, 27);
+    float: left;
+  border: solid 5px;
+  padding: 5px;
+  margin: 2px;
+}
+.h{
+    float: left;
+}
+
+
+/*
+.profile:hover .submenu{
+    display: block;
+}
+.submenu{
+    display: none;
+    position: absolute;
+    list-style: none;
+    top: 28;
+    left: 0;
+}
+*/

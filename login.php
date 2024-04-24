@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Teachers Login</title>
 
-	<link rel="stylesheet" href="stylee.css">
+	<link rel="stylesheet" href="style.css">
 
 </head>
 
