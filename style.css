@@ -4,22 +4,31 @@
   color: #5F9EA0;
 }
 body {
+  height: 100%;
+  width: auto;
   font-size: 120%;
   font-family:century gothic;
   background: #F8F8FF;
   background-image: url('img/bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header{
   width: 30%;
   margin: 10px auto 0px;
   background: rgba(82, 222, 142, 0.7);
-  color: white  ;
   text-align: center;
   border: 1px solid rgb(46, 90, 28);
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
   padding: 20px;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+h1{
+  color: white  ;
+
 }
 
 form, .content {
@@ -30,7 +39,10 @@ form, .content {
   background: rgba(245, 245, 245, 0.7);
   border-radius: 0px 0px 10px 10px;
 }
-
+.form{
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
 .input-group {
   margin: 10px 0px 10px 0px;
 }
