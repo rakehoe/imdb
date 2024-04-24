@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Teachers Login</title>
 
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="stylee.css">
 
 </head>
 
@@ -34,7 +34,7 @@
 		</p>
 	</form>
 	<footer>
-		This is footer... all rights reserved
+		This is the footer... All Rights Reserved
 	</footer>
 </body>
 

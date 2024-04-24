@@ -1,8 +1,8 @@
-<?php include('DBconnect.php') ?>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Teachers Registration</title>
-  <link rel="stylesheet" type="text/css" href="stylee.css">
+  <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
   <div class="header">
@@ -10,18 +10,17 @@
   </div>
   
   <form method="post" action="register.php">
-    <?php include('errors.php'); ?>
     <div class="input-group">
       <label>LastName</label>
-      <input type="text" name="LastName" value="<?php echo $LastName; ?>">
+      <input type="text" name="LastName">
     </div>
     <div class="input-group">
       <label>FirstName</label>
-      <input type="text" name="FirstName" value="<?php echo $FirstName; ?>">
+      <input type="text" name="FirstName">
     </div>
     <div class="input-group">
       <label>Username</label>
-      <input type="text" name="Username" value="<?php echo $Username; ?>">
+      <input type="text" name="Username">
     </div>
     <div class="input-group">
       <label>Password</label>
@@ -35,7 +34,7 @@
       <button type="submit" class="btn" name="reg_user">Register</button>
     </div>
     <p>
-      Already a member? <a href="login.php">Sign in</a>
+      Already a member? <a href="login.html">Sign in</a>
     </p>
   </form>
 </body>
