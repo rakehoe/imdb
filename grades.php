@@ -28,7 +28,7 @@
 	</main>
 
 	<footer>
-		This is footer... all rights reserved
+		This is the footer... All Rights Reserved
 	</footer>
 </body>
 </html>
