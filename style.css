@@ -16,7 +16,7 @@ body {
 }
 
 .header {
-  width: 30%;
+  width: 50%;
   margin: 10px auto 0px;
   background: rgba(82, 222, 142, 0.7);
   text-align: center;
@@ -54,7 +54,7 @@ ul{
 
 form,
 .content {
-  width: 30%;
+  width: 50%;
   margin: 0px auto;
   padding: 20px;
   border: 1px solid rgb(46, 90, 28);
@@ -114,4 +114,13 @@ code for blue effect
   background: #dff0d8;
   border: 1px solid #3c763d;
   margin-bottom: 20px;
+}
+
+/* Applying flexible webpage */
+@media(max-width: 800px) {
+  form,
+  .content,
+  .header{
+    width: 70%;
+  }
 }

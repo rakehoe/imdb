@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Teachers Registration</title>
-  <link rel="stylesheet" type="text/css" href="stylee.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
   <div class="header">
