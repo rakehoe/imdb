@@ -32,11 +32,11 @@
       <label>Confirm password</label>
       <input type="password" name="password_2">
     </div>
-    <div class="input-group">
+    <div class="input-group" style=" display: block;">
       <button type="submit" class="btn" name="reg_user">Register</button>
     </div>
     <p>
-      Already a member? <a href="login.php">Sign in</a>
+      Already a member? <a href="login.php" id="links">Sign in</a>
     </p>
   </form>
 </body>

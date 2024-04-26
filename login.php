@@ -13,7 +13,7 @@
 
 <body>
   <div class="header">
-  	<h1 style="color: white;">Teachers Login</h1>
+  	<h1 style="color: white;">SIGN IN</h1>
   </div>
 	 
 
@@ -27,12 +27,12 @@
 			<label>Password</label>
 			<input class = "input-fields" type="password" name="Password">
 		</div>
-		<div class="input-group">
-			<button type="submit" class="btn" name="login_user">Login</button>
+		<div class="input-group"  style="float: left; display: block;">
+			<button type="submit" name="login_user" class="btn">Login</button>
 		</div>
-		<p>
-			Not a member yet? <a href="register.php">Sign up</a>
-		</p>
+		<div class="input-group" style="float: right;">
+			<a href="register.php"><button type="button" class="btn" id="register" >Register</button></a>
+		</div>
 	</form>
 </body>
 

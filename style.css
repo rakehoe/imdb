@@ -3,12 +3,20 @@
   padding: 0px;
   color: #5F9EA0;
 }
+#links{
+  color:aquamarine;
+}
+#links:hover{
+  color:black;
+}
 
 body {
   height: 100%;
   width: auto;
   font-size: 120%;
-  font-family: century gothic;
+  font-family: axiforma;
+  flex-direction: row;
+  font-weight: 500;
   background: #F8F8FF;
   background-image: url('img/bg.jpeg');
   background-repeat: no-repeat;
@@ -16,8 +24,9 @@ body {
 }
 
 .header {
+  position: relative;
   width: 50%;
-  margin: 10px auto 0px;
+  margin: 10vh auto 0px;
   background: rgba(82, 222, 142, 0.7);
   text-align: center;
   border: 1px solid rgb(46, 90, 28);
@@ -27,43 +36,47 @@ body {
   color: white;
 }
 
-.HomeHeader{
- display:inline;
+.HomeHeader {
+  display: inline;
 }
 
-.tabs:hover{
+.tabs:hover {
   color: aliceblue;
 }
-.tabs{
+
+.tabs {
   font-size: 30px;
-  color:rgb(116, 76, 2);
+  color: rgb(116, 76, 2);
 }
 
-li{
-    display: inline;
-    /* padding: 0px 10px 0px 5px; */
-    padding-left: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-right: 10px;
+li {
+  display: inline;
+  /* padding: 0px 10px 0px 5px; */
+  padding-left: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 10px;
 }
-ul{
-    background-color:rgb(82, 222, 142);
-    font-size: 50px;
+
+ul {
+  background-color: rgb(82, 222, 142);
+  font-size: 50px;
 }
 
 form,
 .content {
+  position: relative;
   width: 50%;
   margin: 0px auto;
   padding: 20px;
+  padding-bottom: 8%;
   border: 1px solid rgb(46, 90, 28);
   background: rgba(245, 245, 245, 0.7);
   border-radius: 0px 0px 10px 10px;
 }
 
 /* 
-code for blue effect
+code for blur effect
 .form{
   filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -83,19 +96,44 @@ code for blue effect
   height: 30px;
   width: 93%;
   padding: 5px 10px;
-  font-size: 15px;
-  border-radius: 5px;
+  font-size: 20px;
+  border-radius: 50px;
   border: 4px solid gray;
   color: black;
 }
 
 .btn {
-  padding: 10px;
-  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  text-align: center;
   color: white;
   background: #5F9EA0;
-  border: none;
-  border-radius: 5px;
+  border-radius: 50px;
+}
+.btn:hover{
+  background: rgba(245, 245, 245, 0.7);
+  border-radius: 50px;
+  border: 2px solid #5F9EA0;
+  color: #5F9EA0;
+  
+}
+
+#register {
+  margin-right: 7%;
+  float: right;
+  background: rgba(245, 245, 245, 0.7);
+  border-radius: 50px;
+  border: 2px solid #5F9EA0;
+  color: #5F9EA0;
+}
+#register:hover{
+  color: white;
+  background: #5F9EA0;
+  
 }
 
 .error {
@@ -118,9 +156,17 @@ code for blue effect
 
 /* Applying flexible webpage */
 @media(max-width: 800px) {
+  .btn{
+    width: 160px;
+  }
+
+  form{
+    padding-bottom: 15%;
+  }
+
   form,
   .content,
-  .header{
+  .header {
     width: 70%;
   }
 }

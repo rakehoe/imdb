@@ -12,26 +12,27 @@
 </head>
 
 <body>
-  <div class="header">
-  	<h1>Teachers Login</h1>
-  </div>
-	 
 
-	<form class = "form">
+	<div class="header">
+		<h1>Teachers Login</h1>
+	</div>
+
+
+	<form class="form">
 		<div class="input-group">
 			<label>Username</label>
-			<input class = "input-fields" type="text" name="Username">
+			<input class="input-fields" type="text" name="Username">
 		</div>
 		<div class="input-group">
 			<label>Password</label>
-			<input class = "input-fields" type="password" name="Password">
+			<input class="input-fields" type="password" name="Password">
 		</div>
-		<div class="input-group" href = "home.html">
-			<button href = "home.html" class="btn">Login</button>
+		<div class="input-group" style="float: left;" href="home.html">
+			<a href="home.html" class="btn">Login</a>
 		</div>
-		<p>
-			Not yet a member? <a href="register.html">Sign up</a>
-		</p>
+		<div class="input-group" style="float: right;">
+			<a type="submit" class="btn" id="register" href="register.html">Register</a>
+		</div>
 	</form>
 </body>
 
