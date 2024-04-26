@@ -13,11 +13,11 @@
   <form method="post" action="register.php">
     <?php include('errors.php'); ?>
     <div class="input-group">
-      <label>LastName</label>
+      <label>Last Name</label>
       <input type="text" name="LastName" value="<?php echo $LastName; ?>">
     </div>
     <div class="input-group">
-      <label>FirstName</label>
+      <label>First Name</label>
       <input type="text" name="FirstName" value="<?php echo $FirstName; ?>">
     </div>
     <div class="input-group">
@@ -32,9 +32,10 @@
       <label>Confirm password</label>
       <input type="password" name="password_2">
     </div>
-    <div class="input-group" style=" display: block;">
-      <button type="submit" class="btn" name="reg_user">Register</button>
+    <div class="input-group" id="signup">
+      <button type="submit" class="btn" name="reg_user">Create Account</button>
     </div>
+    
     <p>
       Already a member? <a href="login.php" id="links">Sign in</a>
     </p>

@@ -1,5 +1,8 @@
 <?php 
   session_start(); 
+  if (isset($_SESSION['Username'])){
+	header('location: Hometabs/home.php');
+  }
 
   if (!isset($_SESSION['Username'])) {
   	$_SESSION['msg'] = "You must log in first";
@@ -14,14 +17,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Home</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Index</title>
+	<link rel="stylesheet" href="homestyle.css">
 </head>
 <body>
-
-<div class="header">
-	<h2>Home Page</h2>
-</div>
 <div class="content">
   	<!-- notification message -->
   	<?php if (isset($_SESSION['success'])) : ?>

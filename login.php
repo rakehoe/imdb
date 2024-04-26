@@ -13,7 +13,7 @@
 
 <body>
   <div class="header">
-  	<h1 style="color: white;">SIGN IN</h1>
+  	<h1 >SIGN IN</h1>
   </div>
 	 
 

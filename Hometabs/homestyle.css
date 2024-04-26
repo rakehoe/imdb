@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+Onefamily=Poppins:wght@400;800');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #5F9EA0;
+}
+
+#links {
+  color: aquamarine;
+}
+
+#links:hover {
+  color: black;
+}
+
+body {
+  height: 100%;
+  width: auto;
+  font-size: 120%;
+  font-family: axiforma;
+  flex-direction: row;
+  font-weight: 500;
+  background: #D9D9D9;
+  background-image: url('img/bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  width: 98%;
+  position: relative;
+  margin: 0px auto 55px;
+  text-align: center;
+  background: #00422E;
+
+  border-top: none;
+  border-radius: 0px 0px 90px 90px;
+
+  padding: 20px;
+
+}
+h1{
+  color: #00E917;
+  font-family: "Paytone One", sans-serif;
+  font-weight: 900;
+}
+
+.tabs{
+  width: 35vh;
+  display: inline-block;
+  background: #36723c;
+
+  font-size: 30px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #ffffff;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+  border-radius: 20px;
+} 
+
+#active{
+  width: 40vh;
+  display: inline-block;
+  background: #A0E5A7;
+
+  font-size: 30px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #00422E;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+
+  border-radius: 20px;
+}
+
+.tabs:hover {
+  background: #A0E5A7;
+  color: #00422E;
+
+} #active:hover {
+  background: #36723c;
+  color: #ffffff;
+}

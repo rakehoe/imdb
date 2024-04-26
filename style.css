@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+Onefamily=Poppins:wght@400;800');
+
 * {
   margin: 0px;
   padding: 0px;
-  color: #5F9EA0;
+  color: #000000e8;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
+
 #links{
-  color:aquamarine;
+  color:#00E917;
 }
 #links:hover{
   color:black;
@@ -23,55 +29,26 @@ body {
   background-size: cover;
 }
 
-.header {
+.header h1{
   position: relative;
-  width: 50%;
+  width: 70vh;
   margin: 10vh auto 0px;
-  background: rgba(82, 222, 142, 0.7);
+  background: rgba(3, 54, 14, 0.705);
   text-align: center;
-  border: 1px solid rgb(46, 90, 28);
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
   padding: 20px;
-  color: white;
-}
-
-.HomeHeader {
-  display: inline;
-}
-
-.tabs:hover {
-  color: aliceblue;
-}
-
-.tabs {
-  font-size: 30px;
-  color: rgb(116, 76, 2);
-}
-
-li {
-  display: inline;
-  /* padding: 0px 10px 0px 5px; */
-  padding-left: 10px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 10px;
-}
-
-ul {
-  background-color: rgb(82, 222, 142);
-  font-size: 50px;
+  color: #35FF4A;
 }
 
 form,
 .content {
   position: relative;
-  width: 50%;
+  width: 70vh;
   margin: 0px auto;
   padding: 20px;
-  padding-bottom: 8%;
-  border: 1px solid rgb(46, 90, 28);
-  background: rgba(245, 245, 245, 0.7);
+  padding-bottom: 15vh;
+  background: rgba(3, 54, 14, 0.705);
   border-radius: 0px 0px 10px 10px;
 }
 
@@ -83,7 +60,7 @@ code for blur effect
 } */
 
 .input-group {
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px 0px 0px;
 }
 
 .input-group label {
@@ -94,45 +71,47 @@ code for blur effect
 
 .input-group input {
   height: 30px;
-  width: 93%;
+  width: 95%;
   padding: 5px 10px;
   font-size: 20px;
   border-radius: 50px;
-  border: 4px solid gray;
-  color: black;
+  background: #A0E5A7;
+  border: 4px solid #A0E5A7;
+  color: #023b07;
 }
 
 .btn {
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 200px;
+  width: 300%;
   display: inline-block;
   position: relative;
   font-size: 20px;
   text-align: center;
-  color: white;
-  background: #5F9EA0;
+  color: black;
+  border: 2px solid #00E917;
+  background: #00E917;
   border-radius: 50px;
 }
 .btn:hover{
-  background: rgba(245, 245, 245, 0.7);
+  background: rgba(3, 54, 14, 0.705);
   border-radius: 50px;
-  border: 2px solid #5F9EA0;
-  color: #5F9EA0;
+  border: 2px solid #00E917;
+  color: white;
   
 }
 
 #register {
-  margin-right: 7%;
+  width: 250%;
   float: right;
-  background: rgba(245, 245, 245, 0.7);
+  background: rgba(3, 54, 14, 0.801);
   border-radius: 50px;
-  border: 2px solid #5F9EA0;
-  color: #5F9EA0;
+  border: 2px solid #00E917;
+  color: white;
 }
 #register:hover{
-  color: white;
-  background: #5F9EA0;
+  color: black;
+  background: #00E917;
   
 }
 
@@ -146,6 +125,9 @@ code for blur effect
   border-radius: 5px;
   text-align: left;
 }
+#signup {
+  width: 10vh;
+}
 
 .success {
   color: #3c763d;
@@ -155,18 +137,12 @@ code for blur effect
 }
 
 /* Applying flexible webpage */
-@media(max-width: 800px) {
+@media(max-width: 900px) {
   .btn{
-    width: 160px;
+    width: 200%;
+  }
+  #register{
+    width: 180%;
   }
 
-  form{
-    padding-bottom: 15%;
-  }
-
-  form,
-  .content,
-  .header {
-    width: 70%;
-  }
 }
