@@ -1,4 +1,5 @@
 <?php include('DBconnect.php') ?>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Teachers Registration</title>

@@ -1,4 +1,5 @@
 <?php include ("DBconnect.php")?>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -33,9 +34,6 @@
 			Not a member yet? <a href="register.php">Sign up</a>
 		</p>
 	</form>
-	<footer>
-		This is the footer... All Rights Reserved
-	</footer>
 </body>
 
 </html>
