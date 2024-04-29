@@ -15,39 +15,58 @@
 }
 
 body {
+  background-image: url('..//img//bg.jpeg');
   height: 100%;
   width: auto;
   font-size: 120%;
   font-family: axiforma;
   flex-direction: row;
   font-weight: 500;
-  background: #D9D9D9;
-  background-image: url('img/bg.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .header {
-  width: 98%;
+  width: 100%;
   position: relative;
-  margin: 0px auto 55px;
   text-align: center;
   background: #00422E;
 
   border-top: none;
   border-radius: 0px 0px 90px 90px;
-
-  padding: 20px;
+  padding-bottom: 15px;
 
 }
+img{
+  display: inline-flex;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 10px 0px 5px 20px;
+  vertical-align: 50%;
+}
+
+.title{
+  text-align: left;
+  height: 90px;
+  width: auto;
+  border-bottom: 2px solid #A0E5A7;
+  margin-bottom: 10px;
+}
+
 h1{
+  width: 400px;
+  display: inline-flex;
   color: #00E917;
   font-family: "Paytone One", sans-serif;
   font-weight: 900;
+  line-height: 70px;
+  vertical-align: 60%;
 }
 
+
 .tabs{
-  width: 35vh;
+  width: 230px;
+  block-size: 65px;
   display: inline-block;
   background: #36723c;
 
@@ -57,16 +76,18 @@ h1{
   font-weight: 800;
   font-style: normal;
   color: #ffffff;
+  text-decoration: none;
+  border: 2px dashed orange;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
-
+  line-height: 60px;
+  vertical-align: 40%;
 
   border-radius: 20px;
+  margin: 0px 10px 0px 10px;
 } 
 
 #active{
-  width: 40vh;
+  width: 250px;
   display: inline-block;
   background: #A0E5A7;
 
@@ -77,8 +98,8 @@ h1{
   font-style: normal;
   color: #00422E;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+  line-height: 60px;
+  vertical-align: 40%;
 
 
   border-radius: 20px;
@@ -87,8 +108,21 @@ h1{
 .tabs:hover {
   background: #A0E5A7;
   color: #00422E;
-
+  width: 40vh;
 } #active:hover {
   background: #36723c;
   color: #ffffff;
+  width: 40vh;
+}
+
+/* Applying flexible webpage */
+@media(max-width: 900px) {
+  .tabs, #active, .tabs:hover, #active:hover{
+    width: 100%;
+  }
+  .header{
+    padding-bottom: 20px;
+    border-radius: 0px 0px 30px 30px;
+  }
+
 }

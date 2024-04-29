@@ -19,19 +19,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Teachers Page</title>
 
-	<link rel="stylesheet" href="homestyle.css">
+	<link rel="stylesheet" href="..//Hometabs//homestyle.css">
 
 </head>
 <body>
 	<header>
 			<div class="header">
-            <h1>TEACHER'S GRADING SYTEM AND DATABASE</h1>
+			<div class="title">
+            <img src="../img/Logo.png" width="70" height="70" usemap="#workmap" style="background: #ffffff;">
+			<map name="workmap">
+				<area shape="rect" coords="0, 0,70, 70" href="home.php" alt="Logo">
+			</map>
+            <h1>GRADO</h1>
+			<br>
+            </div>
 			<a class = "tabs" id="active" href="home.php">Home</a>
 			<a class = "tabs" href="student.php">Students</a>
 			<a class = "tabs" href="grades.php">Grades</a>
 			<a class = "tabs" href="notifications.php">Notifications</a>
-					
-			</div>
+			<br>
+		</div>
 
 		<h1>Welcome Home  <?php echo$_SESSION['Username'];?></h1>
 	</header>

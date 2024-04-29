@@ -9,38 +9,6 @@
   font-style: normal;
 }
 
-#links{
-  color:#00E917;
-}
-#links:hover{
-  color:black;
-}
-
-body {
-  height: 100%;
-  width: auto;
-  font-size: 120%;
-  font-family: axiforma;
-  flex-direction: row;
-  font-weight: 500;
-  background: #F8F8FF;
-  background-image: url('img/bg.jpeg');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.header h1{
-  position: relative;
-  width: 70vh;
-  margin: 10vh auto 0px;
-  background: rgba(3, 54, 14, 0.705);
-  text-align: center;
-  border-bottom: none;
-  border-radius: 10px 10px 0px 0px;
-  padding: 20px;
-  color: #35FF4A;
-}
-
 form,
 .content {
   position: relative;
@@ -94,20 +62,6 @@ form,
   
 }
 
-#register {
-  width: 250%;
-  float: right;
-  background: rgba(3, 54, 14, 0.801);
-  border-radius: 50px;
-  border: 2px solid #00E917;
-  color: white;
-}
-#register:hover{
-  color: black;
-  background: #00E917;
-  
-}
-
 .error {
   width: 92%;
   margin: 0px auto;
@@ -118,24 +72,10 @@ form,
   border-radius: 5px;
   text-align: left;
 }
-#signup {
-  width: 10vh;
-}
 
 .success {
   color: #3c763d;
   background: #dff0d8;
   border: 1px solid #3c763d;
   margin-bottom: 20px;
-}
-
-/* Applying flexible webpage */
-@media(max-width: 900px) {
-  .btn{
-    width: 200%;
-  }
-  #register{
-    width: 180%;
-  }
-
 }
