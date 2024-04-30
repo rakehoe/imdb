@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Paytone+Onefamily=Poppins:wght@400;800');
-
 * {
   margin: 0px;
   padding: 0px;
@@ -9,10 +7,21 @@
   font-style: normal;
 }
 
+body {
+  height: 100%;
+  width: auto;
+  font-size: 120%;
+  font-family: axiforma;
+  flex-direction: row;
+  font-weight: 500;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 form,
 .content {
   position: relative;
-  width: 70vh;
+  width: 70vw;
   margin: 0px auto;
   padding: 20px;
   padding-bottom: 15vh;
@@ -31,11 +40,11 @@ form,
 }
 
 .input-group input {
-  height: 30px;
-  width: 95%;
-  padding: 5px 10px;
+  height: 50px;
+  width: 100%;
+  /* padding: 5px 10px; */
   font-size: 20px;
-  border-radius: 50px;
+  border-radius: 15px;
   background: #A0E5A7;
   border: 4px solid #A0E5A7;
   color: #023b07;
@@ -44,7 +53,7 @@ form,
 .btn {
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 300%;
+  width: 100%;
   display: inline-block;
   position: relative;
   font-size: 20px;

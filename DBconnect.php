@@ -5,6 +5,7 @@ session_start();
 $LastName = "";
 $FirstName = "";
 $Username = "";
+
 $errors = array(); 
 
 // connect to the database
@@ -82,5 +83,40 @@ if (isset($_POST['login_user'])) {
     }
   }
 }
+
+
+$SLastName = "";
+$SFirstName = "";
+$Course = "";
+$YearLevel = "";
+$Gender = "";
+
+//REGISTER STUDENTS
+if (isset($_POST['reg_students'])) {
+  // receive all input values from the form
+  $SLastName = mysqli_real_escape_string($DataBase, $_POST['LastName']);
+  $SFirstName = mysqli_real_escape_string($DataBase, $_POST['FirstName']);
+  $Course = mysqli_real_escape_string($DataBase, $_POST['Course']);
+  $YearLevel = mysqli_real_escape_string($DataBase, $_POST['YearLevel']);
+  $Gender = mysqli_real_escape_string($DataBase, $_POST['Gender']);
+
+  // form validation: ensure that the form is correctly filled ...
+  // by adding (array_push()) corresponding error unto $errors array
+  if (empty($SLastName)) { array_push($errors, "Last name is required"); }
+  if (empty($SFirstName)) { array_push($errors, "First name is required"); }
+  if (empty($YearLevel)) { array_push($errors, "Year level is required"); }
+  if (empty($Course)) { array_push($errors, "Course is required"); }
+  if (empty($Gender)) { array_push($errors, "Gender is required"); }
+
+  // Finally, register user if there are no errors in the form
+  if (count($errors) == 0) {
+
+  	$query = "INSERT INTO students (Course, LastName, FirstName, Gender,YearLevel)  VALUES('$Course', '$SLastName', '$SFirstName', '$Gender','$YearLevel')";
+  	mysqli_query($DataBase, $query);
+  	$_SESSION['success'] = "Added a students successfully";
+  	header('location: ../Hometabs/student.php');
+  }
+}
+
 
 ?>
