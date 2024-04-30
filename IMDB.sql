@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2024 at 03:39 PM
+-- Generation Time: Apr 30, 2024 at 06:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,8 +44,18 @@ CREATE TABLE `students` (
   `StudentsId` int(6) NOT NULL,
   `LastName` varchar(20) NOT NULL,
   `FirstName` varchar(25) NOT NULL,
-  `Course` varchar(10) NOT NULL
+  `Course` varchar(10) NOT NULL,
+  `YearLevel` int(2) NOT NULL,
+  `Gender` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`StudentsId`, `LastName`, `FirstName`, `Course`, `YearLevel`, `Gender`) VALUES
+(2, 'Casquete', 'Rico John', 'BSEMC', 2, 'Male'),
+(3, 'suero', 'ellarie', 'BSEMC', 2, 'Female');
 
 -- --------------------------------------------------------
 
@@ -66,7 +76,8 @@ CREATE TABLE `teachers` (
 --
 
 INSERT INTO `teachers` (`TeachersId`, `LastName`, `FirstName`, `Username`, `Password`) VALUES
-(2, 'casquete', 'rico john', 'rakehoe', 'rake');
+(2, 'casquete', 'rico john', 'rakehoe', 'rake'),
+(3, 'tender', 'juicy', 'hatdog', 'hatdog');
 
 --
 -- Indexes for dumped tables
@@ -98,13 +109,13 @@ ALTER TABLE `teachers`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `StudentsId` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `StudentsId` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `TeachersId` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `TeachersId` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

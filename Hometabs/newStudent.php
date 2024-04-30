@@ -29,39 +29,40 @@
     </header>
     <form method="post" action="newStudent.php">
         <?php include("../errors.php"); ?>
+        
+        <table>
         <tr>
             <h1>Student's Information
             </h1>
         </tr>
-        <tr>
-            <div class="input-group">
+        <th class="input-group">
+            <div>
                 <h2>
                     Students full name
                 </h2>
             </div>
-        </tr>
-        <tr>
-            <div class="input-group">
+        </th>
+        <tr class="input-group">
+            <div>
                 <td><input type="text" name="LastName" placeholder="Last Name" value="<?php echo $LastName; ?>"></td>
                 <td><input type="text" name="FirstName" placeholder="First Name" value="<?php echo $FirstName; ?>"></td>
             </div>
         </tr>
-        <tr>
-            <div class="input-group">
+        <tr class="input-group">
+            <div>
                 <td><input type="text" name="YearLevel" placeholder="Year level" value="<?php echo $YearLevel; ?>"></td>
             </div>
         </tr>
-        <tr>
-            <div class="input-group">
+        <tr class="input-group">
+            <div>
                 <td><input type="text" name="Course" placeholder="Course" value="<?php echo $Course; ?>"></td>
             </div>
         </tr>
-        <tr>
-            <div class="input-group">
+        <tr class="input-group">
+            <div>
                 <td><input type="text" name="Gender" placeholder="Gender" value="<?php echo $Gender; ?>"></td>
             </div>
         </tr>
-        <table>
 
         </table>
         <div class="input-group" id="signup">

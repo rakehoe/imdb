@@ -1,6 +1,5 @@
+<?php include('..//DBconnect.php')?>
 <?php 
-  session_start(); 
-
   if (!isset($_SESSION['Username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: ../login.php');
@@ -20,6 +19,7 @@
     <title>Student List</title>
 
     <link rel="stylesheet" href="..//Hometabs//homestyle.css">
+    <link rel="stylesheet" href="..//Hometabs//Formstyle.css">
 </head>
 
 <body>
@@ -42,11 +42,32 @@
     </header>
 
     <h2 style="text-align:center;"><a href="newStudent.php">ADD Student</a></h2>
-
-    <main>
-        <p>This area is for content</p>
-    </main>
-
+    <table>
+    <?php
+    $sql = "SELECT * FROM students";
+    $result = $DataBase -> query($sql);
+    if ($result -> num_rows > 0){
+        $a = 1;
+        echo "<tr><th colspan='4'><h2>Student List</h2></th></tr>";
+        echo "<tr>
+        <th>List</th>
+        <th>Full name</th>
+        <th>Course</th>
+        <th>Gender</th>
+        </tr>";
+        while ($row = $result -> fetch_assoc()){
+            echo "
+            <tr>
+            <td>".$a++."</td>
+            <td>".$row['LastName'].", ".$row['FirstName']."</td>
+            <td>".$row['Course']."</td>
+            <td>".$row['Gender']."</td>
+            </tr>
+            ";
+        }
+    }
+    ?>
+    </table>
     <footer>
         This is footer... all rights reserved
     </footer>
