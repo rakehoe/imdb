@@ -43,11 +43,13 @@
 
     <h2 style="
     width: 150px;
-    line-height: 10px;
+    line-height: 150px;
+    vertical-align: 50%;
     text-align:center; 
     border-radius:50%; 
     font-size:95px; 
     text-decoration: none;
+    border: 1px solid #8D5103;
     background: white;" ><a href="newStudent.php"> + </a></h2>
     <table>
         <?php
