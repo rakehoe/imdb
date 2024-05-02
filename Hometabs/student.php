@@ -41,9 +41,16 @@
         </div>
     </header>
 
-    <h2 style="text-align:center;"><a href="newStudent.php">ADD Student</a></h2>
+    <h2 style="
+    width: 150px;
+    line-height: 10px;
+    text-align:center; 
+    border-radius:50%; 
+    font-size:95px; 
+    text-decoration: none;
+    background: white;" ><a href="newStudent.php"> + </a></h2>
     <table>
-    <?php
+        <?php
     $sql = "SELECT * FROM students";
     $result = $DataBase -> query($sql);
     if ($result -> num_rows > 0){
@@ -68,9 +75,6 @@
     }
     ?>
     </table>
-    <footer>
-        This is footer... all rights reserved
-    </footer>
 </body>
 
 </html>

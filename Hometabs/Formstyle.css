@@ -14,8 +14,6 @@ body {
   font-family: axiforma;
   flex-direction: row;
   font-weight: 500;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 form,
@@ -25,7 +23,7 @@ form,
   margin: 0px auto;
   padding: 20px;
   padding-bottom: 15vh;
-  background: rgba(3, 54, 14, 0.705);
+  background: #FF8627;
   border-radius: 0px 0px 10px 10px;
 }
 
