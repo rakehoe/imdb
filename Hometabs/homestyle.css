@@ -115,7 +115,7 @@ h1{
 /* Applying flexible webpage */
 @media(max-width: 900px) {
   .tabs, #active, .tabs:hover, #active:hover{
-    width: 100%;
+    width: 100vw;
   }
   .header{
     padding-bottom: 20px;
