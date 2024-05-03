@@ -30,7 +30,7 @@
                 <input placeholder="Username" type="text" name="Username" value="<?php echo $Username; ?>">
             </div>
             <div class="input-group">
-                <input placeholder="Password" type="password" name="password_1">
+                <input placeholder="Password" type="password" class="form-control" name="password_1">
             </div>
             <div class="input-group">
                 <input placeholder="Confirm password" type="password" name="password_2">
