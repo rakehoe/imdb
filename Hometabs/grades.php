@@ -41,13 +41,15 @@
 
 		<h1>Grades Tab</h1>
 	</header>
+	<div>
 
-	<main>
-		<p>This area is for content</p>
-	</main>
+	</div>
+	<div>
+	<table>
 
-	<footer>
-		This is the footer... All Rights Reserved
-	</footer>
+	</table>
+
+	</div>
+
 </body>
 </html>

@@ -1,7 +1,10 @@
 * {
   margin: 0px;
   padding: 0px;
-  color: #143435;
+  color: #572006e8;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
 }
 
 body {
@@ -9,9 +12,10 @@ body {
   width: auto;
   font-size: 120%;
   font-family: axiforma;
+  flex-direction: row;
   font-weight: 500;
-  
 }
+
 
 #links {
   color: aquamarine;
@@ -55,8 +59,103 @@ h1{
   font-size: 55px;
   font-family: "Paytone One", sans-serif;
   font-weight: 900;
-  /* line-height: 70px; */
   vertical-align: 45%;
+}
+
+#add-icon{
+  margin: auto;
+  width: 75px;
+  line-height: 75px;
+  vertical-align: 20%;
+  text-align:center;
+  border-radius:50%; 
+  font-size:70px;
+  border: 1px solid #8D5103;
+  background: white;
+}
+
+form,
+.content {
+  position: relative;
+  width: 70vw;
+  margin: auto auto 20px auto;
+  padding: 1px 20px 200px 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.input-group {
+  margin: 20px auto 0px 0px;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+
+.input-group input {
+  margin: auto;
+  vertical-align: 50%;
+  color: rgb(0, 0, 0);
+  height: 45px;
+  width: 95%;
+  font-size: 18px;
+  border-radius: 5px;
+
+  background-image: linear-gradient(90deg, #FFD603, #FAE579);
+  border: 2px solid #FF8627;
+}
+
+input[type = "text"]::placeholder{
+  padding-left: 15px;
+}
+
+.btn {
+  display: block;
+  height: 50px;
+  width: 95%;
+  font-size: 20px;
+  text-align: center;
+  color: #291802;
+  border: 2px solid #FF8627;
+  background: #F0A800;
+  border-radius: 5px;
+  margin:auto;
+}
+.btn:hover{
+  background: #f0a80017;
+  border: 2px solid #F0A800;
+  color: rgb(39, 15, 0);
+}
+select{
+  display: block;
+  height: 50px;
+  width: 95%;
+  font-size: 20px;
+  text-align: center;
+  color: #291802;
+  border: 2px solid #FF8627;
+  background-image: linear-gradient(90deg, #FFD603, #FAE579);
+  border-radius: 5px;
+  margin:auto;
+}
+
+
+table{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 0px;
+  text-align: center;
+  padding: 5px 10px;
+}
+table .list{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th{
+  background: #F3AF24;
 }
 
 
@@ -99,6 +198,8 @@ h1{
 
   border-radius: 20px;
 }
+
+
 
 .tabs:hover {
   background: #b1862f;

@@ -84,7 +84,6 @@ if (isset($_POST['login_user'])) {
   }
 }
 
-
 $SLastName = "";
 $SFirstName = "";
 $Course = "";
@@ -110,7 +109,6 @@ if (isset($_POST['reg_students'])) {
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
-
   	$query = "INSERT INTO students (Course, LastName, FirstName, Gender,YearLevel)  VALUES('$Course', '$SLastName', '$SFirstName', '$Gender','$YearLevel')";
   	mysqli_query($DataBase, $query);
   	$_SESSION['success'] = "Added a students successfully";
@@ -118,5 +116,60 @@ if (isset($_POST['reg_students'])) {
   }
 }
 
+// Initialize $Filter with an empty string or a default value
+$Filter = [
+  'Course' => '',
+  'Year' => '',
+];$defaults = [
+  'Course' => '',
+  'Year' => '',
+];
+
+// Check if the form has been submitted and the filter is set
+  foreach ($Filter as $key => $value) {
+    if (isset($_POST[$key])) {
+      $Filter[$key] = $_POST[$key];
+    }
+  }
+
+// Function to check and set the selected attribute
+function FILTER($Value, $SValue) {
+  return $Value == $SValue? 'selected' : '';
+}
+
+if (isset($_POST['reset'])) {
+  // Reset the values
+  $Filter = $defaults;
+}
+
+
+//Searching for students
+$search = "";
+if (isset($_POST['Search'])){
+  // receive all input values from the form
+  $search = mysqli_real_escape_string($DataBase, $_POST['Search']);
+  
+  $sql = "SELECT * FROM students";
+  $result = $DataBase -> query($sql);
+        if ($result==$search){
+          echo "
+          <tr>
+          <td>".$a++."</td>
+          <td>".$row['LastName'].", ".$row['FirstName']."</td>
+          <td>".$row['Course']."</td>
+          <td>".$row['Gender']."</td>
+          </tr>
+          ";
+
+        }
+  if ($result -> num_rows > 0){
+      while ($row = $result -> fetch_assoc()){
+      }
+  }
+  
+
+}
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
 ?>
