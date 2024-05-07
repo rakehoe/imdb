@@ -45,6 +45,10 @@
         <h1 >Welcome Home <?php echo$_SESSION['Username'];?></h1 >
 
     <main>
+        <div class = "div1">Iyah</div>
+        <div class = "div2">Yamete</div>
+        <div class = "div3">Kudasai</div>
+
         <p> <a href="home.php?logout='1'" style="color: red;">logout</a> </p>
     </main>
 
