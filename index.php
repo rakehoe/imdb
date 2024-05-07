@@ -71,16 +71,11 @@
 		ALTER TABLE `teachers`
 			MODIFY `TeachersId` int(6) NOT NULL AUTO_INCREMENT;
 	";
-	
-	// Execute SQL statements
-	if ($idb->multi_query($sql)) {
-		echo "SQL statements executed successfully!";
-	} else {
-		echo "Error executing SQL statements: " . $idb->error;
-	}
+	$idb->multi_query($sql);
 	
 	// Close the connection
 	$idb->close();
+	
 	session_start(); 
 
 	if (isset($_SESSION['Username'])){
