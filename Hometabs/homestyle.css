@@ -37,7 +37,7 @@ body {
   padding-bottom: 20px;
 
 }
-img{
+ .logo{
   display: inline-flex;
   border-radius: 50%;
   background: #ffffff;
@@ -255,7 +255,7 @@ th{
 .div3 {
 border: 2px solid rgb(255, 94, 0);
   width: 101px;
-  height: 101px;
+  height: auto;
   border-radius: 25px 25px 25px 25px;
   background: rgb(229, 255, 0) ;
   text-align:center;
