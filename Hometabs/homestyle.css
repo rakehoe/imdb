@@ -143,13 +143,8 @@ select{
 
 table{
   width: 100%;
-  border-spacing: 10px;
+  border-spacing: 5px;
   text-align: center;
-  padding: 5px 10px;
-}
-
-.tcontent{
-  width: 200px;
 }
 
 table .list{

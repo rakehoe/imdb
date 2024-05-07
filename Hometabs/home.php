@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <?php 
-  session_start(); 
-
+  include('..//DBconnect.php');
   if (!isset($_SESSION['Username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: ../login.php');
@@ -12,6 +10,7 @@
   	header("location: ../login.php");
   }
 ?>
+<!DOCTYPE html>
 <html>
 
 <head>

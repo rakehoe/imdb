@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <?php 
-  session_start(); 
-
+  include('..//DBconnect.php');
   if (!isset($_SESSION['Username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: ../login.php');
@@ -12,11 +10,12 @@
   	header("location: ../login.php");
   }
 ?>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>First Webpage!!!</title>
+	<title>Notifications</title>
 
 	<link rel="stylesheet" href="..//Hometabs//homestyle.css">
 </head>

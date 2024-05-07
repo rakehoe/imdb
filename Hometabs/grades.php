@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 <?php 
-  session_start(); 
-
+  include('..//DBconnect.php');
   if (!isset($_SESSION['Username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: ../login.php');
@@ -12,44 +10,92 @@
   	header("location: ../login.php");
   }
 ?>
+<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>First Webpage!!!</title>
 
-	<link rel="stylesheet" href="..//Hometabs//homestyle.css">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grades list</title>
+
+    <link rel="stylesheet" href="homestyle.css">
 
 </head>
+
 <body>
-	<header>
-			<div class="header">
-			<div class="title">
-            <img class= "logo" src="../img/Logo.png" width="70" height="70" usemap="#workmap" style="background: #ffffff;">
-			<map name="workmap">
-				<area shape="rect" coords="0, 0,70, 70" href="home.php" alt="Logo">
-			</map>
-            <h1>GRADES</h1>
-			<br>
+    <header>
+        <div class="header">
+            <div class="title">
+                <img class="logo" src="../img/Logo.png" width="70" height="70" usemap="#workmap"
+                    style="background: #ffffff;">
+                <map name="workmap">
+                    <area shape="rect" coords="0, 0,70, 70" href="home.php" alt="Logo">
+                </map>
+                <h1>GRADES</h1>
+                <br>
             </div>
-			<a class = "tabs" href="home.php">Home</a>
-			<a class = "tabs" href="student.php">Students</a>
-			<a class = "tabs" id="active" href="grades.php">Grades</a>
-			<a class = "tabs" href="notifications.php">Notifications</a>
-			<br>
-		</div>
+            <a class="tabs" href="home.php">Home</a>
+            <a class="tabs" href="student.php">Students</a>
+            <a class="tabs" id="active" href="grades.php">Grades</a>   
+            <a class="tabs" href="notifications.php">Notifications</a>
+            <br>
+        </div>
+    </header>
+    <div>
 
-		<h1>Grades Tab</h1>
-	</header>
-	<div>
+    </div>
+    <div>
+        <form action='studentStats.php' method='post' style="width:100%">
+        <table>
+            </tr>
+            <tr>
+                <th></th>
+                <th class="Tcontent">Full name</th>
+                <th class="Tcontent" style="font-size:10px">Activity 1</th>
+                <th class="Tcontent" style="font-size:10px">Activity 2</th>
+                <th class="Tcontent" style="font-size:10px">Activity 3</th>
+                <th class="Tcontent" style="font-size:10px">Midterm</th>
+                <th class="Tcontent" style="font-size:10px">Finals</th>
+                <th class="Tcontent" style="font-size:10px">Performance</th>
+                <th class="Tcontent" style="font-size:10px">Total Grade</th>
+            </tr>
+                <?php
+		 $List = $DataBase->prepare("
+		 SELECT * FROM grades 
+		 ORDER BY  SLastName ASC");
 
-	</div>
-	<div>
-	<table>
+	 	 // Execute the prepared statement
+	 	 $List -> execute();
+ 
+	 	 // Get the result set from the executed statement
+	 	 $result = $List->get_result();
+		  if ($result->num_rows > 0) {
+			while ($row = $result->fetch_assoc()) {
+				// Create a form for each row
+				echo "<tr>";
+				echo "<td>
+				<div>
+					<button class='btn' style='font-size: 10px' type='sumbit name=".$row['GradesId']." value='save'>Save</button>
+				</div></td>";
+				echo "<td style='font-size:15px;'>" .$row['SLastName'] .", " .$row['SFirstName'] . "</td>";
+				echo "<td><div><input style='width:90px' type='text' value='". $row['Act1']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' value='". $row['Act2']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' value='". $row['Act3']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' value='". $row['Midterm']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' value='". $row['Finals']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' value='". $row['Performance']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' value='". $row['TotalGrades']."'></div></td>";
+				echo "</tr>";
+			}
+		}
+		?>
+<td colspan='3'>
+            </table>
 
-	</table>
+        </form>
 
-	</div>
+    </div>
 
 </body>
+
 </html>

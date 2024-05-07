@@ -117,10 +117,9 @@ if (isset($_POST['reg_students'])) {
   if (count($errors) == 0) {
   	$query = "
     INSERT INTO students (Course, LastName, FirstName, Gender, YearLevel)  VALUES('$Course', '$SLastName', '$SFirstName', '$Gender','$YearLevel');
-    SLastName	SFirstName	Act1	Act2	Act3	Midterm	Finals	Performance	TotalGrades	GradesId	StudentId
-    INSERT INTO grades (
+    INSERT INTO grades (SLastName, SFirstName) VALUES('$SLastName','$SFirstName');
     ";
-  	mysqli_query($DataBase, $query);
+    $DataBase ->multi_query($query);
   	$_SESSION['success'] = "Added a students successfully";
   	header('location: ../Hometabs/student.php');
   }

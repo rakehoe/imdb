@@ -23,17 +23,17 @@
 	$idb = new mysqli('localhost', 'root', '', $DbName);
 	$sql = "
 		CREATE TABLE `grades` (
+			`GradesId` int(6) NOT NULL,
+			`StudentId` int(6) NOT NULL,
 			`SLastName` varchar(11) NOT NULL,
 			`SFirstName` varchar(11) NOT NULL,
+			`TotalGrades` int(11) NOT NULL,
 			`Act1` int(11) NOT NULL,
 			`Act2` int(11) NOT NULL,
 			`Act3` int(11) NOT NULL,
 			`Midterm` int(11) NOT NULL,
 			`Finals` int(11) NOT NULL,
-			`Performance` int(11) NOT NULL,
-			`TotalGrades` int(11) NOT NULL,
-			`GradesId` int(6) NOT NULL,
-			`StudentId` int(6) NOT NULL
+			`Performance` int(11) NOT NULL
 		) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 	
 		CREATE TABLE `students` (
@@ -55,13 +55,30 @@
 
 		INSERT INTO `teachers` (`TeachersId`, `LastName`, `FirstName`, `Username`, `Password`) VALUES
 		(1, 'IMFINALS', 'IMFINALS', 'IMFINALS', 'IMFINALS');
-	
+		
+		INSERT INTO `students` (`StudentId`, `LastName`, `FirstName`, `Course`, `Gender`, `YearLevel`) VALUES
+		(1, 'Sumido', 'Nave', 'BSCS', 'Male', 4),
+		(2, 'Padilla', 'Janine', 'BSCS', 'Female', 4),
+		(3, 'Langurayan', 'Kevin', 'BSCS', 'Male', 4),
+		(4, 'Venezuela', 'Anita Rosario ', 'BSIT', 'Male', 1),
+		(5, 'Maws', 'Er Gonomic', 'BSIS', 'Female', 2),
+		(6, 'Hoe', 'Rake', 'BSEMC', 'Male', 2),
+		(7, 'Dimi', 'Mommy', 'BSEMC', 'Female', 2),
+		(8, 'Toast', 'KumaKuma', 'BSEMC', 'Male', 2),
+		(9, 'Karina', 'Huya', 'BSEMC', 'Male', 2),
+		(10, 'Sasala', 'Ma Ka', 'BLIS', 'Male', 1),
+		(11, 'Washington', 'Yamamiyamiyamot', 'BLIS', 'Female', 1),
+		(12, 'Matta', 'Mr.Scruffy', 'BLIS', 'Male', 4),
+		(13, 'kat', 'Fumi da', 'BSCS', 'Male', 4),
+		(14, 'White', 'Mr. Snowny', 'BSIS', 'Male', 3),
+		(15, 'Dimagiba', 'Bryce', 'BSIS', 'Male', 3),
+		(16, 'Trenas', 'Joey', 'BSIS', 'Male', 3),
+		(17, 'Ada', 'Mama mo si', 'BSIS', 'Female', 3),
+		(18, 'De Castro', 'Joel', 'BSIT', 'Male', 1);
+
 		ALTER TABLE grades
-			ADD PRIMARY KEY (`GradesId`),
-			ADD CONSTRAINT `studentsId` FOREIGN KEY (`StudentId`) REFERENCES `students`(`StudentId`),
-			ADD CONSTRAINT `lastname` FOREIGN KEY (`SLastName`) REFERENCES `students`(`SLastName`),
-			ADD CONSTRAINT `firstname` FOREIGN KEY (`SFirstName`) REFERENCES `students`(`SFirstName`),
-			MODIFY `GradesId` int(6) NOT NULL AUTO_INCREMENT;
+		ADD PRIMARY KEY (`GradesId`),
+		MODIFY `GradesId` INT(6) NOT NULL AUTO_INCREMENT;
 	
 		ALTER TABLE students
 			ADD PRIMARY KEY (`StudentId`),

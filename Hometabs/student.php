@@ -1,5 +1,5 @@
-<?php include('..//DBconnect.php')?>
 <?php 
+  include('..//DBconnect.php');
   if (!isset($_SESSION['Username'])) {
   	$_SESSION['msg'] = "You must log in first";
   	header('location: ../login.php');
@@ -95,9 +95,9 @@
                 </td>
             </tr>
             <tr>
-                <th class="Tcontent">Full name</th>
-                <th class="Tcontent">Course</th>
-                <th class="Tcontent">Year</th>
+                <th>Full name</th>
+                <th>Course</th>
+                <th>Year</th>
             </tr>
             <?php
 
@@ -119,13 +119,13 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td class='Tcontent'>".$row['LastName'].", ".$row['FirstName']."</td>
-                    <td class='Tcontent'>".$row['Course']."</td>
-                    <td class='Tcontent'>".$row['YearLevel']."</td>
+                    <td>".$row['LastName'].", ".$row['FirstName']."</td>
+                    <td>".$row['Course']."</td>
+                    <td>".$row['YearLevel']."</td>
                     </tr>"; 
             }
         } else {
-            echo "<tr><td colspan='4'>You don't have any students. </td></tr>" .$fcourse;
+            echo "<tr><td colspan='4'>You don't have any students. </td></tr>";
         }
         $Filcourse -> close();
         ?>
