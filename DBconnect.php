@@ -11,7 +11,6 @@ $errors = array();
 // connect to the database
 $DataBase = mysqli_connect('localhost', 'root', '', 'imdb');
 
-
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
@@ -116,6 +115,10 @@ if (isset($_POST['reg_students'])) {
   }
 }
 
+
+$GLOBALS[ 'C']='';
+$GLOBALS[ 'Y']='';
+
 // Initialize $Filter with an empty string or a default value
 $Filter = [
   'Course' => '',
@@ -125,23 +128,47 @@ $Filter = [
   'Year' => '',
 ];
 
-// Check if the form has been submitted and the filter is set
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   foreach ($Filter as $key => $value) {
-    if (isset($_POST[$key])) {
-      $Filter[$key] = $_POST[$key];
-    }
+      if (isset($_POST[$key])) {
+          $Filter[$key] = $_POST[$key];
+          FILTER($_POST[$key], $key); // Call FILTER function to set globals
+      }
   }
-
+}
 // Function to check and set the selected attribute
 function FILTER($Value, $SValue) {
+  if ($SValue=='Course') {
+    $GLOBALS['C'] = $Value;
+  }
+  if ($SValue=='Year') {
+    $GLOBALS['Y'] = $Value;
+  }
   return $Value == $SValue? 'selected' : '';
 }
-
-if (isset($_POST['reset'])) {
-  // Reset the values
-  $Filter = $defaults;
+//function to give the list their given filters
+function mine(){
+  $x = $GLOBALS['C'];
+  $y = $GLOBALS['Y'];
+  return array($x,$y);
 }
 
+// Reset the values
+if (isset($_POST['reset'])) {
+$Filter = $defaults;
+$GLOBALS[ 'C']='';
+$GLOBALS[ 'Y']='';
+}
+// Delete all students
+if (isset($_POST['deletelist'])) {
+  $sql = "TRUNCATE TABLE students";
+
+  if ($DataBase->query($sql) === TRUE) {
+    echo "Table truncated successfully";
+} else {
+    echo "Error truncating table: " . $DataBase->error;
+}
+}
 
 //Searching for students
 $search = "";
@@ -169,7 +196,5 @@ if (isset($_POST['Search'])){
   
 
 }
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
 ?>

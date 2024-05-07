@@ -18,7 +18,7 @@
 <html>
 <head>
 	<title>Index</title>
-	<link rel="stylesheet" href="homestyle.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="content">
