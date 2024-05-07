@@ -88,6 +88,13 @@ $SFirstName = "";
 $Course = "";
 $YearLevel = "";
 $Gender = "";
+$Act1 = "";
+$Act2 = "";
+$Act3 = "";
+$Midterm = "";
+$Final = "";
+$Perfom = "";
+$Avg = "";
 
 //REGISTER STUDENTS
 if (isset($_POST['reg_students'])) {
@@ -108,7 +115,11 @@ if (isset($_POST['reg_students'])) {
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
-  	$query = "INSERT INTO students (Course, LastName, FirstName, Gender,YearLevel)  VALUES('$Course', '$SLastName', '$SFirstName', '$Gender','$YearLevel')";
+  	$query = "
+    INSERT INTO students (Course, LastName, FirstName, Gender, YearLevel)  VALUES('$Course', '$SLastName', '$SFirstName', '$Gender','$YearLevel');
+    SLastName	SFirstName	Act1	Act2	Act3	Midterm	Finals	Performance	TotalGrades	GradesId	StudentId
+    INSERT INTO grades (
+    ";
   	mysqli_query($DataBase, $query);
   	$_SESSION['success'] = "Added a students successfully";
   	header('location: ../Hometabs/student.php');
@@ -162,12 +173,7 @@ $GLOBALS[ 'Y']='';
 // Delete all students
 if (isset($_POST['deletelist'])) {
   $sql = "TRUNCATE TABLE students";
-
-  if ($DataBase->query($sql) === TRUE) {
-    echo "Table truncated successfully";
-} else {
-    echo "Error truncating table: " . $DataBase->error;
-}
+  $DataBase->query($sql);
 }
 
 //Searching for students

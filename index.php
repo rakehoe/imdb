@@ -52,30 +52,30 @@
 			`Username` varchar(35) NOT NULL,
 			`Password` varchar(12) NOT NULL
 		) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+		INSERT INTO `teachers` (`TeachersId`, `LastName`, `FirstName`, `Username`, `Password`) VALUES
+		(1, 'IMFINALS', 'IMFINALS', 'IMFINALS', 'IMFINALS');
 	
-		ALTER TABLE `grades`
-			ADD PRIMARY KEY (`GradesId`);
-	
-		ALTER TABLE `students`
-			ADD PRIMARY KEY (`StudentId`);
-	
-		ALTER TABLE `teachers`
-			ADD PRIMARY KEY (`TeachersId`) KEY_BLOCK_SIZE=6 USING HASH COMMENT 'Primary key of teachers table';
-	
-		ALTER TABLE `grades`
+		ALTER TABLE grades
+			ADD PRIMARY KEY (`GradesId`),
+			ADD CONSTRAINT `studentsId` FOREIGN KEY (`StudentId`) REFERENCES `students`(`StudentId`),
+			ADD CONSTRAINT `lastname` FOREIGN KEY (`SLastName`) REFERENCES `students`(`SLastName`),
+			ADD CONSTRAINT `firstname` FOREIGN KEY (`SFirstName`) REFERENCES `students`(`SFirstName`),
 			MODIFY `GradesId` int(6) NOT NULL AUTO_INCREMENT;
 	
-		ALTER TABLE `students`
+		ALTER TABLE students
+			ADD PRIMARY KEY (`StudentId`),
 			MODIFY `StudentId` int(6) NOT NULL AUTO_INCREMENT;
 	
-		ALTER TABLE `teachers`
+		ALTER TABLE teachers
+			ADD PRIMARY KEY (`TeachersId`),
 			MODIFY `TeachersId` int(6) NOT NULL AUTO_INCREMENT;
 	";
 	$idb->multi_query($sql);
 	
 	// Close the connection
 	$idb->close();
-	
+
 	session_start(); 
 
 	if (isset($_SESSION['Username'])){

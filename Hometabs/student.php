@@ -19,6 +19,11 @@
     <title>Student List</title>
 
     <link rel="stylesheet" href="homestyle.css">
+    <script>
+        function confirmPopup(){
+            alert("Are you sure you want to delete the entire list?");
+        }
+    </script>
 </head>
 
 <body>
@@ -46,7 +51,7 @@
         <table>
             <tr class="input-group">
                 <td colspan='2'>
-                    <div><input type="text" placeholder="Search students lastname, firstname"></div>
+                    <div><input type="text" placeholder="Search students lastname, firstname" style="width:100%; height:47px"></div>
                 </td>
                 <td class="input-group">
                     <div id="signup">
@@ -56,7 +61,7 @@
         </table>
         <table>
             <tr>
-                <td class="input-group"><select name="Course" onchange="this.form.submit()">
+                <td class="input-group"><select name="Course" style="width:100%;" onchange="this.form.submit()">
                         <option value="" disable hidden>COURSE</option>
                         <!-- The all option cause an error that resets the select -->
                         <option <?php echo FILTER('all', $Filter['Course']); ?> value="">ALL</option>
@@ -66,7 +71,7 @@
                         <option <?php echo FILTER('BLIS', $Filter['Course']); ?> value="BLIS">BLIS</option>
                         <option <?php echo FILTER('BSIS', $Filter['Course']); ?> value="BSIS">BSIS</option>
                     </select></td>
-                <td class="input-group"><select name="Year" onchange="this.form.submit()">
+                <td class="input-group"><select name="Year" style="width:100%;" onchange="this.form.submit()">
                         <option value="" disable hidden>Year Level</option>
                         <!-- The all option cause an error that resets the select -->
                         <option <?php echo FILTER('all', $Filter['Year']); ?> value="">ALL</option>
@@ -127,7 +132,7 @@
         <tr>
         <td colspan='3'>
             <div>
-                <button class="btn" type="sumbit" name="deletelist" value="Reset">Delete All </button>
+                <button class="btn" style="width:100%;" type="sumbit" name="deletelist" value="Reset" onclick="confirmPopup()">Delete All </button>
             </div>
         </td>
         </tr>
