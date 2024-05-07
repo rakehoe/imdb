@@ -86,6 +86,14 @@ form,
   margin: 3px;
 }
 
+input[type = "text"]::placeholder{
+  color: white;
+  padding-left: 15px;
+}
+input[type = "password"]::placeholder{
+  color: white;
+  padding-left: 15px;
+}
 .input-group input {
   margin: 0px 15% 0px 15%;
   vertical-align: 50%;
@@ -112,6 +120,14 @@ form,
   border: 2px solid #F6F6F6;
   background: #F0A800;
   border-radius: 50px;
+}
+
+.showbtn{
+  display: inline-block;
+  font-weight: lighter;
+  width: 70px;
+  font-size: 10px;
+
 }
 .btn:hover{
   background: #f0a80017;

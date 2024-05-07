@@ -12,7 +12,7 @@
 <body>
     <div class="header">
         <div class="title">
-            <img src="../img/Logo.png" width="70" height="70" usemap="#workmap" style="background: #ffffff;">
+            <img class= "logo" src="../img/Logo.png" width="70" height="70" usemap="#workmap" style="background: #ffffff;">
             <map name="workmap">
                 <area shape="rect" coords="0, 0,70, 70" href="home.php" alt="Logo">
             </map>

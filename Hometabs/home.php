@@ -27,7 +27,7 @@
     <header>
         <div class="header">
             <div class="title">
-                <img src="../img/Logo.png" width="70" height="70" usemap="#workmap" style="background: #ffffff;">
+                <img class= "logo" src="../img/Logo.png" width="70" height="70" usemap="#workmap" style="background: #ffffff;">
                 <map name="workmap">
                     <area shape="rect" coords="0, 0,70, 70" href="home.php" alt="Logo">
                 </map>
@@ -45,6 +45,68 @@
         <h1 >Welcome Home <?php echo$_SESSION['Username'];?></h1 >
 
     <main>
+        <div class = "div1">Iyah <br>
+            <p class="textleft" style = "text-align: left; color: black;">Ooh</p><br>
+         <br></div>
+
+        <div class = "div2">
+            Yamete <br>
+            <p style = "text-align: left; color: black;">Ooh</p><br>
+        </div>
+
+        <div class = "div3">Kudasai <br>
+            <p style = "text-align: left; color: black;">Ooh</p>
+            <img src="../img/lolo.png" width = "70" height = "70">
+        </div>
+        <div>
+            <table style="margin:auto;">
+                <tr>
+                    <th colspan="7">Calendar</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td></tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td></tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td></tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td></tr>
+            </table>
+        </div>
+
         <p> <a href="home.php?logout='1'" style="color: red;">logout</a> </p>
     </main>
 
