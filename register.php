@@ -1,4 +1,4 @@
-<?php include('DBconnect.php') ?>
+<?php include ('DBconnect.php') ?>
 <!DOCTYPE html>
 <html>
 
@@ -9,10 +9,10 @@
 
 <body>
     <div class="header">
-        <?php include('errors.php'); 
-		echo("<br>")
-		?>
-    <img src="..//..//imdb//img//Logo.png" width="70" height="70" style="background: #ffffff;">
+        <?php include ('errors.php');
+        echo ("<br>")
+            ?>
+        <img src="..//..//imdb//img//Logo.png" width="70" height="70" style="background: #ffffff;">
         <h1>GRADO</h1>
         <br>
         <h2>SIGN UP</h2>
@@ -29,15 +29,30 @@
             <div class="input-group">
                 <input placeholder="Username" type="text" name="Username" value="<?php echo $Username; ?>">
             </div>
+
             <div class="input-group">
-                <input placeholder="Password" type="password" name="password_1">
+                <input placeholder="Password" type="password" name="password_1" id="password_1">
+                <button style="margin-right: 17%; float: right; display: block;" class="btn showbtn" type="button" onclick="togglePasswordVisibility('password_1')">Show</button>
             </div>
             <div class="input-group">
-                <input placeholder="Confirm password" type="password" name="password_2">
+                <input placeholder="Confirm password" type="password" name="password_2" id="password_2">
+                <button style="margin-right: 17%; float: right; display: block;" class="btn showbtn" type="button" onclick="togglePasswordVisibility('password_2')">Show</button>
             </div>
-            <div class="input-group" style="margin-left: 15%; float: left; display: block;">
-                <button type="submit" class="btn" name="reg_user">Create Account</button>
+
+            <script>
+                function togglePasswordVisibility(inputId) {
+                    var input = document.getElementById(inputId);
+                    if (input.type === "password") {
+                        input.type = "text";
+                    } else {
+                        input.type = "password";
+                    }
+                }
+            </script>
+            <div class = "input-group" style="margin-left: 15%; float: left; display: block;">
+            <button type= "submit" class="btn" name="reg_user">Create Account</button>
             </div>
+
 
             <div class="input-group">
                 <br><br>
