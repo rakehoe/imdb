@@ -45,7 +45,7 @@
 
     </div>
     <div>
-        <form action='studentStats.php' method='post' style="width:100%">
+        <form action='grades.php' method='post' style="width:100%">
         <table>
             </tr>
             <tr>
@@ -75,22 +75,25 @@
 				echo "<tr>";
 				echo "<td>
 				<div>
-					<button class='btn' style='font-size: 10px' type='sumbit name=".$row['GradesId']." value='save'>Save</button>
+					<button class='btn' style='font-size: 10px' type='sumbit name='update' value='save'>Save</button>
 				</div></td>";
 				echo "<td style='font-size:15px;'>" .$row['SLastName'] .", " .$row['SFirstName'] . "</td>";
-				echo "<td><div><input style='width:90px' type='text' value='". $row['Act1']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' value='". $row['Act2']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' value='". $row['Act3']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' value='". $row['Midterm']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' value='". $row['Finals']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' value='". $row['Performance']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' value='". $row['TotalGrades']."'></div></td>";
+				echo "<div><input style='width:90px' type='text' hidden name='Lastname' value='". $row['SLastName']."'></div>";
+				echo "<div><input style='width:90px' type='text' hidden name='Firstname' value='". $row['SFirstName']."'></div>";
+				echo "<div><input style='width:90px' type='text' hidden name='gradeid' value='". $row['GradesId']."'></div>";
+				echo "<td><div><input style='width:90px' type='text' name='act1' value='". $row['Act1']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' name='act2' value='". $row['Act2']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' name='act3' value='". $row['Act3']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' name='midterm' value='". $row['Midterm']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' name='finals' value='". $row['Finals']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' name='performance' value='". $row['Performance']."'></div></td>";
+				echo "<td><div><input style='width:90px' type='text' name='totalgrades' value='". $row['TotalGrades']."'></div></td>";
 				echo "</tr>";
 			}
 		}
 		?>
 <td colspan='3'>
-            </table>
+            </table>    
 
         </form>
 

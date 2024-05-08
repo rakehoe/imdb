@@ -24,7 +24,6 @@
 	$sql = "
 		CREATE TABLE `grades` (
 			`GradesId` int(6) NOT NULL,
-			`StudentId` int(6) NOT NULL,
 			`SLastName` varchar(11) NOT NULL,
 			`SFirstName` varchar(11) NOT NULL,
 			`TotalGrades` int(11) NOT NULL,
@@ -75,6 +74,27 @@
 		(16, 'Trenas', 'Joey', 'BSIS', 'Male', 3),
 		(17, 'Ada', 'Mama mo si', 'BSIS', 'Female', 3),
 		(18, 'De Castro', 'Joel', 'BSIT', 'Male', 1);
+
+		INSERT INTO `grades` (`GradesId`, `SLastName`, `SFirstName`) VALUES
+		(1, 'Sumido', 'Nave'),
+		(2, 'Padilla', 'Janine' ),
+		(3, 'Langurayan', 'Kevin'),
+		(4, 'Venezuela', 'Anita Rosario'),
+		(5, 'Maws', 'Er Gonomic' ),
+		(6, 'Hoe', 'Rake'),
+		(7, 'Dimi', 'Mommy'),
+		(8, 'Toast', 'KumaKuma'),
+		(9, 'Karina', 'Huya'),
+		(10, 'Sasala', 'Ma Ka'),
+		(11, 'Washington', 'Yamamiyamiyamot'),
+		(12, 'Matta', 'Mr.Scruffy'),
+		(13, 'kat', 'Fumi da'),
+		(14, 'White', 'Mr. Snowny'),
+		(15, 'Dimagiba', 'Bryce'),
+		(16, 'Trenas', 'Joey'),
+		(17, 'Ada', 'Mama mo si'),
+		(18, 'De Castro', 'Joel');
+
 
 		ALTER TABLE grades
 		ADD PRIMARY KEY (`GradesId`),

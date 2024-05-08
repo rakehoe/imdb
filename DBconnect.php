@@ -175,31 +175,44 @@ if (isset($_POST['deletelist'])) {
   $DataBase->query($sql);
 }
 
-//Searching for students
-$search = "";
-if (isset($_POST['Search'])){
-  // receive all input values from the form
-  $search = mysqli_real_escape_string($DataBase, $_POST['Search']);
-  
-  $sql = "SELECT * FROM students";
-  $result = $DataBase -> query($sql);
-        if ($result==$search){
-          echo "
-          <tr>
-          <td>".$a++."</td>
-          <td>".$row['LastName'].", ".$row['FirstName']."</td>
-          <td>".$row['Course']."</td>
-          <td>".$row['Gender']."</td>
-          </tr>
-          ";
+if (isset($_POST["update"])){
+  $GradesId =   mysqli_real_escape_string($DataBase, $_POST['gradesid']);
+  $SLastName =   mysqli_real_escape_string($DataBase, $_POST['Lastname']);
+  $SFirstName =  mysqli_real_escape_string($DataBase, $_POST['Firstname']);
+  $Course =  mysqli_real_escape_string($DataBase, $_POST['course']);
+  $Act1 =  mysqli_real_escape_string($DataBase, $_POST['act1']);
+  $Act2 =  mysqli_real_escape_string($DataBase, $_POST['act2']);
+  $Act3 =  mysqli_real_escape_string($DataBase, $_POST['act3']);
+  $Midterm =   mysqli_real_escape_string($DataBase, $_POST['midterm']);
+  $Final =   mysqli_real_escape_string($DataBase, $_POST['finals']);
+  $Perfom =  mysqli_real_escape_string($DataBase, $_POST['performance']);
+  $Avg =   mysqli_real_escape_string($DataBase, $_POST['totalgrades']);
 
-        }
-  if ($result -> num_rows > 0){
-      while ($row = $result -> fetch_assoc()){
-      }
-  }
-  
-
+  $sql = "UPDATE `grades` SET `GradesId`='$GradesId',`SLastName`='$SLastName',`SFirstName`='$SFirstName',`TotalGrades`='$Avg',`Act1`='$Act1',`Act2`='$Act2',`Act3`='$Act3',`Midterm`='$Midterm',`Finals`='$Midterm',`Performance`='$Perform' WHERE 1";
+  $DataBase->query($sql);
 }
+// //Searching for students
+// $search = "";
+// if (isset($_POST['Search'])){
+//   // receive all input values from the form
+//   $search = mysqli_real_escape_string($DataBase, $_POST['Search']);
+  
+//   $sql = "SELECT * FROM students";
+//   $result = $DataBase -> query($sql);
+//         if ($result==$search){
+//           echo "
+//           <tr>
+//           <td>".$a++."</td>
+//           <td>".$row['LastName'].", ".$row['FirstName']."</td>
+//           <td>".$row['Course']."</td>
+//           <td>".$row['Gender']."</td>
+//           </tr>
+//           ";
 
+//         }
+//   if ($result -> num_rows > 0){
+//       while ($row = $result -> fetch_assoc()){
+//       }
+//   }
+// }
 ?>
