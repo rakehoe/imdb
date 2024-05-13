@@ -5,11 +5,11 @@ session_start();
 $LastName = "";
 $FirstName = "";
 $Username = "";
+
 $errors = array(); 
 
 // connect to the database
 $DataBase = mysqli_connect('localhost', 'root', '', 'imdb');
-
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -76,11 +76,143 @@ if (isset($_POST['login_user'])) {
     if (mysqli_num_rows($results) == 1) {
       $_SESSION['Username'] = $Username;
       $_SESSION['success'] = "You are now logged in";
-      header('location: index.php');
+      header('location: Hometabs/home.php');
     }else {
       array_push($errors, "Wrong Username/password combination");
     }
   }
 }
 
+$SLastName = "";
+$SFirstName = "";
+$Course = "";
+$YearLevel = "";
+$Gender = "";
+$Act1 = "";
+$Act2 = "";
+$Act3 = "";
+$Midterm = "";
+$Final = "";
+$Perfom = "";
+$Avg = "";
+
+//REGISTER STUDENTS
+if (isset($_POST['reg_students'])) {
+  // receive all input values from the form
+  $SLastName = mysqli_real_escape_string($DataBase, $_POST['LastName']);
+  $SFirstName = mysqli_real_escape_string($DataBase, $_POST['FirstName']);
+  $Course = mysqli_real_escape_string($DataBase, $_POST['Course']);
+  $YearLevel = mysqli_real_escape_string($DataBase, $_POST['YearLevel']);
+  $Gender = mysqli_real_escape_string($DataBase, $_POST['Gender']);
+
+  // form validation: ensure that the form is correctly filled ...
+  // by adding (array_push()) corresponding error unto $errors array
+  if (empty($SLastName)) { array_push($errors, "Last name is required"); }
+  if (empty($SFirstName)) { array_push($errors, "First name is required"); }
+  if (empty($YearLevel)) { array_push($errors, "Year level is required"); }
+  if (empty($Course)) { array_push($errors, "Course is required"); }
+  if (empty($Gender)) { array_push($errors, "Gender is required"); }
+
+  // Finally, register user if there are no errors in the form
+  if (count($errors) == 0) {
+  	$query = "
+    INSERT INTO students (Course, LastName, FirstName, Gender, YearLevel)  VALUES('$Course', '$SLastName', '$SFirstName', '$Gender','$YearLevel');
+    INSERT INTO grades (SLastName, SFirstName) VALUES('$SLastName','$SFirstName');
+    ";
+    $DataBase ->multi_query($query);
+  	$_SESSION['success'] = "Added a students successfully";
+  	header('location: ../Hometabs/student.php');
+  }
+}
+
+
+$GLOBALS[ 'C']='';
+$GLOBALS[ 'Y']='';
+
+// Initialize $Filter with an empty string or a default value
+$Filter = [
+  'Course' => '',
+  'Year' => '',
+];$defaults = [
+  'Course' => '',
+  'Year' => '',
+];
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  foreach ($Filter as $key => $value) {
+      if (isset($_POST[$key])) {
+          $Filter[$key] = $_POST[$key];
+          FILTER($_POST[$key], $key); // Call FILTER function to set globals
+      }
+  }
+}
+// Function to check and set the selected attribute
+function FILTER($Value, $SValue) {
+  if ($SValue=='Course') {
+    $GLOBALS['C'] = $Value;
+  }
+  if ($SValue=='Year') {
+    $GLOBALS['Y'] = $Value;
+  }
+  return $Value == $SValue? 'selected' : '';
+}
+//function to give the list their given filters
+function mine(){
+  $x = $GLOBALS['C'];
+  $y = $GLOBALS['Y'];
+  return array($x,$y);
+}
+
+// Reset the values
+if (isset($_POST['reset'])) {
+$Filter = $defaults;
+$GLOBALS[ 'C']='';
+$GLOBALS[ 'Y']='';
+}
+// Delete all students
+if (isset($_POST['deletelist'])) {
+  $sql = "TRUNCATE TABLE students";
+  $DataBase->query($sql);
+}
+
+if (isset($_POST["update"])){
+  $GradesId =   mysqli_real_escape_string($DataBase, $_POST['gradesid']);
+  $SLastName =   mysqli_real_escape_string($DataBase, $_POST['Lastname']);
+  $SFirstName =  mysqli_real_escape_string($DataBase, $_POST['Firstname']);
+  $Course =  mysqli_real_escape_string($DataBase, $_POST['course']);
+  $Act1 =  mysqli_real_escape_string($DataBase, $_POST['act1']);
+  $Act2 =  mysqli_real_escape_string($DataBase, $_POST['act2']);
+  $Act3 =  mysqli_real_escape_string($DataBase, $_POST['act3']);
+  $Midterm =   mysqli_real_escape_string($DataBase, $_POST['midterm']);
+  $Final =   mysqli_real_escape_string($DataBase, $_POST['finals']);
+  $Perfom =  mysqli_real_escape_string($DataBase, $_POST['performance']);
+  $Avg =   mysqli_real_escape_string($DataBase, $_POST['totalgrades']);
+
+  $sql = "UPDATE `grades` SET `GradesId`='$GradesId',`SLastName`='$SLastName',`SFirstName`='$SFirstName',`TotalGrades`='$Avg',`Act1`='$Act1',`Act2`='$Act2',`Act3`='$Act3',`Midterm`='$Midterm',`Finals`='$Midterm',`Performance`='$Perform' WHERE 1";
+  $DataBase->query($sql);
+}
+// //Searching for students
+// $search = "";
+// if (isset($_POST['Search'])){
+//   // receive all input values from the form
+//   $search = mysqli_real_escape_string($DataBase, $_POST['Search']);
+  
+//   $sql = "SELECT * FROM students";
+//   $result = $DataBase -> query($sql);
+//         if ($result==$search){
+//           echo "
+//           <tr>
+//           <td>".$a++."</td>
+//           <td>".$row['LastName'].", ".$row['FirstName']."</td>
+//           <td>".$row['Course']."</td>
+//           <td>".$row['Gender']."</td>
+//           </tr>
+//           ";
+
+//         }
+//   if ($result -> num_rows > 0){
+//       while ($row = $result -> fetch_assoc()){
+//       }
+//   }
+// }
 ?>

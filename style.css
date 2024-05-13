@@ -1,76 +1,83 @@
 * {
   margin: 0px;
   padding: 0px;
-  color: #5F9EA0;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+#links{
+  color:#FF8627;
+}
+#links:hover{
+  color:black;
 }
 
 body {
   height: 100%;
   width: auto;
   font-size: 120%;
-  font-family: century gothic;
-  background: #F8F8FF;
-  background-image: url('img/bg.jpeg');
+  font-family: axiforma;
+  flex-direction: row;
+  font-weight: 500;
+  background: #fefeff;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+h1{
+  display: inline-block;
+  color: #8D5103;
+  font-family: "Paytone One", sans-serif;
+  line-height: 70px;
+  vertical-align: 20%;
+  font-size: 60px;
+}
+
+h2{
+  display: inline-block;
+  color: #8D5103;
+  font-family: "Paytone One", sans-serif;
+  vertical-align: 20%;
+  font-size: 40px;
+}
+
 .header {
-  width: 30%;
-  margin: 10px auto 0px;
-  background: rgba(82, 222, 142, 0.7);
+  position: relative;
+  width: 70vw;
+  margin: 20px auto 0px;
+  background: #2e1a0a;
   text-align: center;
-  border: 1px solid rgb(46, 90, 28);
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
-  padding: 20px;
-  color: white;
+  padding: 100px 20px 0px 20px;
 }
 
-.HomeHeader{
- display:inline;
+
+img{
+  display: inline-block;
+  border-radius: 50%;
+  background: #ffffff;
+  /* margin: 10px 0px 5px 20px; */
 }
 
-.tabs:hover{
-  color: aliceblue;
-}
-.tabs{
-  font-size: 30px;
-  color:rgb(116, 76, 2);
-}
-
-li{
-    display: inline;
-    /* padding: 0px 10px 0px 5px; */
-    padding-left: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-right: 10px;
-}
-ul{
-    background-color:rgb(82, 222, 142);
-    font-size: 50px;
+.container > div{
+  flex: 1;
 }
 
 form,
 .content {
-  width: 30%;
-  margin: 0px auto;
-  padding: 20px;
-  border: 1px solid rgb(46, 90, 28);
-  background: rgba(245, 245, 245, 0.7);
+  position: relative;
+  width: 70vw;
+  margin: auto auto 20px auto;
+  padding: 1px 20px 200px 20px;
+  background: #2e1a0a;
   border-radius: 0px 0px 10px 10px;
 }
 
-/* 
-code for blue effect
-.form{
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-} */
-
 .input-group {
-  margin: 10px 0px 10px 0px;
+  margin: 20px auto 0px 0px;
 }
 
 .input-group label {
@@ -79,34 +86,82 @@ code for blue effect
   margin: 3px;
 }
 
+input[type = "text"]::placeholder{
+  color: white;
+  padding-left: 15px;
+}
+input[type = "password"]::placeholder{
+  color: white;
+  padding-left: 15px;
+}
 .input-group input {
-  height: 30px;
-  width: 93%;
-  padding: 5px 10px;
-  font-size: 15px;
-  border-radius: 5px;
-  border: 4px solid gray;
-  color: black;
+  margin: 0px 15% 0px 15%;
+  vertical-align: 50%;
+  color: rgb(0, 0, 0);
+  height: 45px;
+  width: 65%;
+  padding: 8px 15px;  
+  font-size: 18px;
+  border-radius: 50px;
+
+  background-image: linear-gradient(90deg, #FFD603, #FAE579);
+  border: 2px solid #FF8627;
 }
 
 .btn {
-  padding: 10px;
-  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  display: inline-block;
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+  color: #291802;
+  border: 2px solid #F6F6F6;
+  background: #F0A800;
+  border-radius: 50px;
+}
+
+.showbtn{
+  display: inline-block;
+  font-weight: lighter;
+  width: 70px;
+  font-size: 10px;
+
+}
+.btn:hover{
+  background: #f0a80017;
+  border-radius: 50px;
+  border: 2px solid #F0A800;
   color: white;
-  background: #5F9EA0;
-  border: none;
-  border-radius: 5px;
+  
+}
+
+#register {
+  width: 200px;
+  float: right;
+  background: #f0a80017;
+  border-radius: 50px;
+  border: 2px solid #F0A800;
+  color: white;
+}
+#register:hover{
+  color: #291802;
+  background: #F6F6F6;
+  
 }
 
 .error {
   width: 92%;
   margin: 0px auto;
-  padding: 10px;
+  padding: 20px 10px 30px 10px;
   border: 1px solid #a94442;
-  color: #a94442;
   background: #f2dede;
   border-radius: 5px;
   text-align: left;
+}
+#signup {
+  width: 10vh;
 }
 
 .success {
@@ -114,4 +169,15 @@ code for blue effect
   background: #dff0d8;
   border: 1px solid #3c763d;
   margin-bottom: 20px;
+}
+
+/* Applying flexible webpage */
+@media(max-width: 900px) {
+  .btn{
+    width: 200%;
+  }
+  #register{
+    width: 180%;
+  }
+
 }

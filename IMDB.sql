@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 23, 2024 at 07:18 AM
+-- Generation Time: May 07, 2024 at 02:39 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,40 @@ SET time_zone = "+00:00";
 --
 -- Database: `imdb`
 --
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `grades`
+--
+
+CREATE TABLE `grades` (
+  `SLastName` varchar(11) NOT NULL,
+  `SFirstName` varchar(11) NOT NULL,
+  `Act1` int(11) NOT NULL,
+  `Act2` int(11) NOT NULL,
+  `Act3` int(11) NOT NULL,
+  `Midterm` int(11) NOT NULL,
+  `Finals` int(11) NOT NULL,
+  `Performance` int(11) NOT NULL,
+  `TotalGrades` int(11) NOT NULL,
+  `GradesId` int(6) NOT NULL,
+  `StudentId` int(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `students`
+--
+
+CREATE TABLE `students` (
+  `StudentId` int(6) NOT NULL,
+  `LastName` varchar(15) NOT NULL,
+  `FirstName` varchar(15) NOT NULL,
+  `Course` varchar(6) NOT NULL,
+  `Gender` varchar(7) NOT NULL,
+  `YearLevel` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -40,11 +74,24 @@ CREATE TABLE `teachers` (
 --
 
 INSERT INTO `teachers` (`TeachersId`, `LastName`, `FirstName`, `Username`, `Password`) VALUES
-(1, 'casquete', 'rico john', 'rakehoe', 'b5c0b187fe30');
+(2, 'casquete', 'rico john', 'rakehoe', 'rake'),
+(3, 'tender', 'juicy', 'hatdog', 'hatdog');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `grades`
+--
+ALTER TABLE `grades`
+  ADD PRIMARY KEY (`GradesId`);
+
+--
+-- Indexes for table `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`StudentId`);
 
 --
 -- Indexes for table `teachers`
@@ -57,10 +104,22 @@ ALTER TABLE `teachers`
 --
 
 --
+-- AUTO_INCREMENT for table `grades`
+--
+ALTER TABLE `grades`
+  MODIFY `GradesId` int(6) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `students`
+--
+ALTER TABLE `students`
+  MODIFY `StudentId` int(6) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `teachers`
 --
 ALTER TABLE `teachers`
-  MODIFY `TeachersId` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `TeachersId` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

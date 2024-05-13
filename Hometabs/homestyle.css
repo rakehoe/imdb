@@ -1,0 +1,258 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  color: #572006e8;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+body {
+  height: 100%;
+  width: auto;
+  font-size: 120%;
+  font-family: axiforma;
+  flex-direction: row;
+  font-weight: 500;
+}
+
+
+#links {
+  color: aquamarine;
+}
+
+#links:hover {
+  color: black;
+}
+
+
+.header {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background: #F88E3C;
+
+  border-top: none;
+  border-radius: 0px 0px 90px 90px;
+  padding-bottom: 20px;
+
+}
+ .logo{
+  display: inline-flex;
+  border-radius: 50%;
+  background: #ffffff;
+  margin: 10px 0px 5px 20px;
+  vertical-align: 50%;
+}
+
+.title{
+  text-align: left;
+  height: 90px;
+  width: auto;
+  border-bottom: 2px solid #3f2502;
+  margin-bottom: 10px;
+}
+
+h1{
+  display: inline-flex;
+  color: #8D5103;
+  font-size: 55px;
+  font-family: "Paytone One", sans-serif;
+  font-weight: 900;
+  vertical-align: 45%;
+}
+
+#add-icon{
+  margin: auto;
+  width: 75px;
+  line-height: 75px;
+  vertical-align: 20%;
+  text-align:center;
+  border-radius:50%; 
+  font-size:70px;
+  border: 1px solid #8D5103;
+  background: white;
+}
+
+form,
+.content {
+  position: relative;
+  width: 70vw;
+  margin: auto auto 20px auto;
+  padding: 1px 20px 200px 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.input-group {
+  margin: 20px auto 0px 0px;
+}
+
+.input-group label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+
+.input-group input {
+  margin: auto;
+  vertical-align: 50%;
+  color: rgb(0, 0, 0);
+  height: 45px;
+  width: 95%;
+  font-size: 18px;
+  border-radius: 5px;
+
+  background-image: linear-gradient(90deg, #FFD603, #FAE579);
+  border: 2px solid #FF8627;
+}
+
+input[type = "text"]::placeholder{
+  padding-left: 15px;
+}
+
+.btn {
+  display: block;
+  height: 50px;
+  width: 95%;
+  font-size: 20px;
+  text-align: center;
+  color: #291802;
+  border: 2px solid #FF8627;
+  background: #F0A800;
+  border-radius: 5px;
+  margin:auto;
+}
+.btn:hover{
+  background: #f0a80017;
+  border: 2px solid #F0A800;
+  color: rgb(39, 15, 0);
+}
+select{
+  display: block;
+  height: 50px;
+  width: 95%;
+  font-size: 20px;
+  text-align: center;
+  color: #291802;
+  border: 2px solid #FF8627;
+  background-image: linear-gradient(90deg, #FFD603, #FAE579);
+  border-radius: 5px;
+  margin:auto;
+}
+
+
+table{
+  width: 100%;
+  border-spacing: 5px;
+  text-align: center;
+}
+
+table .list{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th{
+  background: #F3AF24;
+}
+
+
+.tabs{
+  width: 230px;
+  block-size: 65px;
+  display: inline-block;
+  background: #F3AF24;
+
+  font-size: 30px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #ffffff;
+  text-decoration: none;
+
+  line-height: 60px;
+  vertical-align: 40%;
+
+  border-radius: 20px;
+  margin: 0px 10px 0px 10px;
+} 
+
+#active{
+  width: 250px;
+  display: inline-block;
+  background: #b1862f;
+
+  font-size: 30px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800px;
+  font-style: normal;
+  color: #8D5103;
+
+  line-height: 60px;
+  vertical-align: 40%;
+
+
+  border-radius: 20px;
+}
+
+
+
+.tabs:hover {
+  background: #b1862f;
+
+  color: #8D5103;
+  width: 260px;
+} #active:hover {
+  background: #b1862f;
+
+  color: #8D5103;
+  width: 260px;
+}
+
+/* Applying flexible webpage */
+@media(max-width: 900px) {
+  .tabs, #active, .tabs:hover, #active:hover{
+    width: 100vw;
+  }
+  .header{
+    padding-bottom: 20px;
+    border-radius: 0px 0px 30px 30px;
+  }
+
+
+}
+
+.div1 {
+  border: 2px solid rgb(255, 94, 0);
+  width: 210px;
+  height: 101px;
+  border-radius: 25px 25px 25px 25px;
+  background: yellow ;
+  text-align:center;
+  color: rgb(77, 77, 77);
+  margin: 0px 90px 90px 90px;
+
+}
+
+.div2 {
+  border: 2px solid rgb(255, 94, 0);
+  width: 130px;
+  height: 140px;
+  border-radius: 25px 25px 25px 25px;
+  background: rgb(229, 255, 0) ;
+  text-align:center;
+  color: rgb(77, 77, 77);
+
+}
+
+.div3 {
+border: 2px solid rgb(255, 94, 0);
+  width: 101px;
+  height: auto;
+  border-radius: 25px 25px 25px 25px;
+  background: rgb(229, 255, 0) ;
+  text-align:center;
+  color: rgb(77, 77, 77);
+}
