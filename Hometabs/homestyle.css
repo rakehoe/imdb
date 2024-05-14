@@ -31,7 +31,6 @@ body {
   position: relative;
   text-align: center;
   background: #F88E3C;
-
   border-top: none;
   border-radius: 0px 0px 90px 90px;
   padding-bottom: 20px;
@@ -225,34 +224,234 @@ th{
 }
 
 .div1 {
-  border: 2px solid rgb(255, 94, 0);
-  width: 210px;
-  height: 101px;
+  border: 2px solid rgb(252, 199, 157);
+  width: 590px;
+  height: 202px;
+  position: absolute;
+  top:394.5px;
+  right:30px;
+  bottom: 20px;
+  left: 30px;
   border-radius: 25px 25px 25px 25px;
-  background: yellow ;
-  text-align:center;
-  color: rgb(77, 77, 77);
-  margin: 0px 90px 90px 90px;
-
+  background: rgb(252, 199, 157) ;
+  box-shadow:  0 1rem 2rem hsl(0 0% 0% / 20%);
 }
 
-.div2 {
-  border: 2px solid rgb(255, 94, 0);
-  width: 130px;
-  height: 140px;
-  border-radius: 25px 25px 25px 25px;
-  background: rgb(229, 255, 0) ;
-  text-align:center;
-  color: rgb(77, 77, 77);
+.text1 {
+  margin-top: 10px;
+  margin-left: 30px;
+  color: rgb(81, 48, 5);
+  font-size: 25px;
+}
 
+.pic{
+  height: 120px;
+  width: 120px;
+  border-radius: 60px 60px 60px 60px;
+  position: absolute;
+  top: 60px;
+  left: 40px
+}
+
+.inside-text1{
+  font-family: 'Arial narrow';
+  position: absolute;
+  top: 60px;
+  left: 200px;
+  font-size: 30px;
+  color: rgb(98, 57, 3);
+}
+
+.inside-text11{
+  font-family: 'Arial narrow';
+  position: absolute;
+  top: 105px;
+  left: 200px;
+  font-size: 15px;
+  color: black;
+  line-height: 0.5cm;
+}
+
+
+
+.div2 {
+ 
+  width: 590px;
+  height: 202px;
+  position: absolute;
+  top:394.5px;
+  right:30px;
+  left: 640px;
+  border-radius: 25px 25px 25px 25px;
+  background: rgb(217, 217, 217);
+  border: 2px solid rgb(81, 48, 5);
+}
+
+.text2 {
+  margin-top: 10px;
+  margin-left: 30px;
+  color: rgb(255, 0, 0);
+  font-size: 25px;
+}
+
+  .picc{
+  height: 50px;
+  width: 50px;
+  border-radius: 60px 60px 60px 60px;
+  position: absolute;
+  top: 90px;
+  left: 265px
+  
+
+  }
+
+.inside-text2 {
+  font-family: 'Arial narrow';
+  text-align: center;
+  font-size: 20px;
+  margin-top: 80px;
+  color:black;
 }
 
 .div3 {
-border: 2px solid rgb(255, 94, 0);
-  width: 101px;
-  height: auto;
+  width: 590px;
+  height: 275px;
+  position: absolute;
+  top:610px;
+  right:30px;
+  bottom: 20px;
+  left: 30px;
   border-radius: 25px 25px 25px 25px;
-  background: rgb(229, 255, 0) ;
+  background: rgb(217, 217, 217);
   text-align:center;
-  color: rgb(77, 77, 77);
+  color: rgb(81, 48, 5);
+  border: 2px solid rgb(81, 48, 5);
 }
+
+.text3{
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: rgb(81, 48, 5);
+  font-size: 25px;
+}
+.inside-text3{
+  font-family: 'Arial narrow';
+  text-align: left;
+  position: absolute;
+  top: 55px;
+  left: 30px ;
+  font-size: 15px;
+  color: black;
+  line-height: 0.7cm;
+}
+
+.piccc{
+  height: 150px;
+  width: 150px;
+  border-radius: 80px 80px 80px 80px;
+  position: absolute;
+  top: 60px;
+  left: 398px
+}
+
+
+
+.div4{
+  border: 2px solid rgb(252, 199, 157);
+  width: 590px;
+  height: 275px;
+  position: absolute;
+  top:900px;
+  right:30px;
+  bottom: 20px;
+  left: 30px;
+  border-radius: 25px 25px 25px 25px;
+  background: rgb(252, 199, 157) ;
+  text-align:center;
+  color: rgb(81, 48, 5);
+  font-size: 25px;
+  box-shadow:  0 1rem 2rem hsl(0 0% 0% / 20%);
+}
+.text4{
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: rgb(81, 48, 5);
+  font-size: 25px;
+}
+.inside-text4{
+  text-align: left;
+  background-color:rgb(240, 168, 0);
+  border-radius:15px;
+  font-size:16px;
+  padding:20px;
+  margin:8px;
+}
+
+.inside-text41 {
+  text-align: left;
+  background-color:rgb(240, 168, 0);
+  border-radius:15px;
+  font-size:16px;
+  padding:20px;
+  margin:8px;
+  position: absolute;
+  top: 120px;
+
+}
+
+.inside-text42 {
+  text-align: left;
+  background-color:rgb(240, 168, 0);
+  border-radius:15px;
+  font-size:16px;
+  padding:20px;
+  margin:8px;
+}
+
+.div5{
+  border: 2px solid rgb(252, 199, 157);
+  width: 590px;
+  height: 275px;
+  position: absolute;
+  top:900px;
+  left: 640px;
+  border-radius: 25px 25px 25px 25px;
+  background: rgb(252, 199, 157) ;
+  
+  box-shadow:  0 1rem 2rem hsl(0 0% 0% / 20%);
+}
+
+.text5{
+  text-align: left;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: rgb(81, 48, 5);
+  font-size: 25px;
+}
+
+.inside-text5{
+  font-family: "arial narrow";
+  text-decoration:underline;
+  position: absolute;
+  top: 60px;
+  left: 30px ;
+  font-size: 15px;
+  color: black;
+  
+}
+
+.cal{
+  border: 2px solid rgb(252, 199, 157);
+  width: 590px;
+  height: 275px;
+  position: absolute;
+  top: 610px;
+  left: 640px;
+  background: rgb(255, 255, 255);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  box-shadow:  0 1rem 2rem hsl(0 0% 0% / 20%);
+}
+
