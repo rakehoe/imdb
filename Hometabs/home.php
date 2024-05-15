@@ -94,7 +94,7 @@
                     <th colspan="7">2024 Calendar<br>
                 MAY<br></th>
                     </tr>
-                <tr>
+                <tr> 
                     <td>S</td>
                     <td>M</td>
                     <td>T</td>
