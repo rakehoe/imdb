@@ -41,8 +41,6 @@
         </div>
     </header>
 
-        <h1 >Welcome Home <?php echo$_SESSION['Username'];?></h1 >
-
     <main>
         <div class = "div1">
             <p class= "text1">Student's Progress</p><br>
@@ -66,7 +64,7 @@
             <p class= "text3">Teacher's Info</p> <br>
             <p class= "inside-text3">
                 ID No.: 1954M0021 <br>
-                Name: Einstein, Albert<br>
+                Name: <?php echo$_SESSION['Username'];?><br>
                 Department/College: CICT<br>
                 Teacher’s Status: EMPLOYED - FULL TIME <br>
                 Email Address: albert.einstein@wvsu.edu.ph<br>

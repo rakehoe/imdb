@@ -176,7 +176,7 @@ if (isset($_POST['deletelist'])) {
 }
 
 if (isset($_POST["update"])){
-  $GradesId =   mysqli_real_escape_string($DataBase, $_POST['gradesid']);
+  $GradesId =   mysqli_real_escape_string($DataBase, $_POST['gradeid']);
   $SLastName =   mysqli_real_escape_string($DataBase, $_POST['Lastname']);
   $SFirstName =  mysqli_real_escape_string($DataBase, $_POST['Firstname']);
   $Course =  mysqli_real_escape_string($DataBase, $_POST['course']);
@@ -190,6 +190,7 @@ if (isset($_POST["update"])){
 
   $sql = "UPDATE `grades` SET `GradesId`='$GradesId',`SLastName`='$SLastName',`SFirstName`='$SFirstName',`TotalGrades`='$Avg',`Act1`='$Act1',`Act2`='$Act2',`Act3`='$Act3',`Midterm`='$Midterm',`Finals`='$Midterm',`Performance`='$Perform' WHERE 1";
   $DataBase->query($sql);
+  print($LastName) ;
 }
 // //Searching for students
 // $search = "";

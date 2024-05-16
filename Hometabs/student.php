@@ -19,11 +19,13 @@
     <title>Student List</title>
 
     <link rel="stylesheet" href="homestyle.css">
+
     <script>
         function confirmPopup(){
             alert("Are you sure you want to delete the entire list?");
         }
     </script>
+    
 </head>
 
 <body>
@@ -119,9 +121,9 @@
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>
-                    <td>".$row['LastName'].", ".$row['FirstName']."</td>
-                    <td>".$row['Course']."</td>
-                    <td>".$row['YearLevel']."</td>
+                    <td style='text-align:left;'>".$row['LastName'].", ".$row['FirstName']."</td>
+                    <td style='text-align:left;'>".$row['Course']."</td>
+                    <td style='text-align:left;'>".$row['YearLevel']."</td>
                     </tr>"; 
             }
         } else {
@@ -132,16 +134,20 @@
         <tr>
         <td colspan='3'>
             <div>
-                <button class="btn" style="width:100%;" type="sumbit" name="deletelist" value="Reset" onclick="confirmPopup()">Delete All </button>
+                <a class="btn" href="newStudent.php" style="width:100%; text-decoration: none;"> Add new students </a>
             </div>
         </td>
         </tr>
+        <tr></tr>
+        <tr></tr>
+        <tr>
+        <td colspan="3">
+            <div>
+                <button class="btn" style="width:100%; background:red;" type="sumbit" name="deletelist" value="Reset" onclick="confirmPopup()">Delete All </button>
+            </div>
+        </td>
 
-        </table>
-        <table style="width:70px">
-        <th id="add-icon" style="vertical-align: 40%">
-            <h2><a href="newStudent.php" style=" text-decoration: none; "> + </a></h2>
-        </th>
+        </tr>
 
         </table>
     </form>

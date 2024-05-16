@@ -63,11 +63,10 @@ h1{
 
 #add-icon{
   margin: auto;
-  width: 75px;
-  line-height: 75px;
+  width: 100%;
   vertical-align: 20%;
   text-align:center;
-  border-radius:50%; 
+  border-radius:20%; 
   font-size:70px;
   border: 1px solid #8D5103;
   background: white;
@@ -356,8 +355,8 @@ th{
 }
 
 
-
 .div4{
+  display: block;
   border: 2px solid rgb(252, 199, 157);
   width: 590px;
   height: 275px;
@@ -398,7 +397,6 @@ th{
   margin:8px;
   position: absolute;
   top: 120px;
-
 }
 
 .inside-text42 {

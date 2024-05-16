@@ -45,7 +45,6 @@
 
     </div>
     <div>
-        <form action='grades.php' method='post' style="width:100%">
         <table>
             </tr>
             <tr>
@@ -59,6 +58,7 @@
                 <th class="Tcontent" style="font-size:10px">Performance</th>
                 <th class="Tcontent" style="font-size:10px">Total Grade</th>
             </tr>
+        <form action='grades.php' method='post' style="width:100%">
                 <?php
 		 $List = $DataBase->prepare("
 		 SELECT * FROM grades 
@@ -81,13 +81,13 @@
 				echo "<div><input style='width:90px' type='text' hidden name='Lastname' value='". $row['SLastName']."'></div>";
 				echo "<div><input style='width:90px' type='text' hidden name='Firstname' value='". $row['SFirstName']."'></div>";
 				echo "<div><input style='width:90px' type='text' hidden name='gradeid' value='". $row['GradesId']."'></div>";
-				echo "<td><div><input style='width:90px' type='text' name='act1' value='". $row['Act1']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' name='act2' value='". $row['Act2']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' name='act3' value='". $row['Act3']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' name='midterm' value='". $row['Midterm']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' name='finals' value='". $row['Finals']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' name='performance' value='". $row['Performance']."'></div></td>";
-				echo "<td><div><input style='width:90px' type='text' name='totalgrades' value='". $row['TotalGrades']."'></div></td>";
+				echo "<td><div><input style='width:50px' type='text' name='act1' value='". $row['Act1']."'></div></td>";
+				echo "<td><div><input style='width:50px' type='text' name='act2' value='". $row['Act2']."'></div></td>";
+				echo "<td><div><input style='width:50px' type='text' name='act3' value='". $row['Act3']."'></div></td>";
+				echo "<td><div><input style='width:50px' type='text' name='midterm' value='". $row['Midterm']."'></div></td>";
+				echo "<td><div><input style='width:50px' type='text' name='finals' value='". $row['Finals']."'></div></td>";
+				echo "<td><div><input style='width:50px' type='text' name='performance' value='". $row['Performance']."'></div></td>";
+				echo "<td><div>".$row['TotalGrades']."</div></td>";
 				echo "</tr>";
 			}
 		}
